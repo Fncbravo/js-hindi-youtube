@@ -26,3 +26,6 @@ let someNumber = 33
 let stringNumber = String(someNumber);
 console.log(stringNumber);
 console.log(typeof stringNumber);
+
+// Conversion is really easy you'all
+// Just assign a variable then assign another variable & = what you want to convert it into (1st variable)
