@@ -53,3 +53,37 @@ console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+// JSON TALK
+const course = {
+    coursename: "Js in hindi",
+    price: "999",
+    courseInstructor: "Hitesh"
+}
+
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course
+
+// console.log(courseInstructor);
+console.log(instructor);
+
+// const navbar = ({company}) => {          REACT DESTRUCTURING
+
+
+// }
+
+// navbar(company = "Hitesh")
+
+// JSON
+// {
+//     "name": "hitesh",
+//     "coursename": "Js in hindi",
+//     "price": "free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
