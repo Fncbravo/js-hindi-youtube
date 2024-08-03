@@ -46,8 +46,19 @@ if (true) {
 
 // +++++++++++++++++++++++++++++ interesting ++++++++++++++++++++++++++++++++++
 
+console.log(addone(5))
+
 function addone (num) {
-    return num + 1
+    return num + 1                      // we can see functions getting declared by this common wway and another way also 
+    
 }
 
-addone(5)
+
+addTwo(5)
+const addTwo = function(num) {
+    return num + 2                        ;// this is the another way to declare fucntins in variables.
+}
+
+
+//  error occurs when you declare a function in variable & try to execute it before.
+// we will learn hoisting concept how funtions are declarerd & stored & execution context etc.
