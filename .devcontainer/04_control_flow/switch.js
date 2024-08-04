@@ -1,29 +1,30 @@
 // switch (key) {
 //     case value:
         
-//         break;
+//         break;                  //SYNTAX
 
 //     default:
 //         break;
 // }
 
+
 const month = "march"
 
 switch (month) {
     case "jan":
-        console.log("January");
+        console.log("January");            
         break;
     case "feb":
-        console.log("feb");
+        console.log("Feb");            
         break;
     case "march":
-        console.log("march");
+        console.log("March");            
         break;
     case "april":
-        console.log("april");
+        console.log("April");            
         break;
 
-    default:
+    default: 
         console.log("default case match");
         break;
-}
+}   
