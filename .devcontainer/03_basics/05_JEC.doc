@@ -1,0 +1,72 @@
+Javascript Execution Context
+
+{} --->    Global EC   (this)
+
+- Global Execution Context
+- Function Execution Context
+- Eval Execution Context      ( prop of global obj)
+
+{}   ------>  Memory Creation phase (memory allocation)
+     ------>  Execution phase
+
+let val1 = 10
+let val2 = 5
+function addNum(num1, num2) {
+    let total = num1 + num2
+    return total
+}
+let result1 = addNum(val1, val2)
+let result2 = addNum(10, 2)
+
+STEP 1: GLOBAL EXECUTION - THIS
+STEP 2: MEMERY PHASE - val1 --> undefined
+                       val2 --> undefined
+                       addNum --> definition
+                       result1 --> undefined
+                       result2 --> undefined
+STEP 3: EXECUTION PHASE - val1 --> 10
+                          val2 --> 5
+                          addNum -- > new execution context
+                                      new variable environment & execution thread
+                                      1. MEMORY CREATION PHASE              // EVERYTIME YOU WRITE A FUNCTION A NEW SANDBOX WILL BE CREATED
+                                      2. EXECUTION PHASE
+
+                                      Memory phase - val1 --> undefined
+                                                     val2 --> undefined
+                                                     total --> undefined
+                                      Execution phase - num1 --> 10
+                                                        num2 --> 5
+                                                        total --> 15
+
+                                                        // total value return to the global execution context
+
+                                                        // The new global execution context gets deleted after its work. 
+
+                                                        result1 --> 15
+                                                        
+                                                        result2 --> new execution context
+                                                        NVE + thread
+
+                                                        1. Memory phase - as it is before
+                                                        2. Exection phase
+                                                        - as it is
+                                                        and total will come here too and will be returned into global execution context main.
+
+--------------------------------------------------------------
+                      CALLSTACK 
+
+
+                   !              !
+                   !              !
+                   !              !
+                   !              !
+                   !              ! 
+     one()         !     one()    !               one()
+                   !  GLOBAL EXEC !
+
+    1st step           2nd step                3rd step
+
+    if two() is called when one() is still inside & lets say three() is also called on top of two() .  LIFO Concept  Last In First Out
+
+    
+
