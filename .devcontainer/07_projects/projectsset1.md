@@ -33,7 +33,8 @@ buttons.forEach( function(button) {
      body.style.backgroundColor = e.target.id
    }
   })
-})
+});
+```
 
 ## project 2 solution
 
